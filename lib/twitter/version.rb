@@ -19,7 +19,7 @@ module Twitter
 
     # @return [Integer, NilClass]
     def pre
-      nil
+      1
     end
 
     # @return [Hash]

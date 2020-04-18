@@ -110,7 +110,7 @@ module Twitter
       # @option options [Boolean, String, Integer] :include_rts Specifies that the timeline should include native retweets in addition to regular tweets. Note: If you're using the trim_user parameter in conjunction with include_rts, the retweets will no longer contain a full user object.
       # @option options [Boolean, String, Integer] :contributor_details Specifies that the contributors element should be enhanced to include the screen_name of the contributor.
       def home_timeline(options = {})
-        perform_get_with_objects('/1.1/statuses/home_timeline.json', options, Twitter::Tweet)
+        perform_get_with_objects('/1.1/statuses/home_timeline.json?tweet_mode=extended', options, Twitter::Tweet)
       end
 
       # Returns the 20 most recent retweets posted by users the authenticating user follow.
